@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <title>Modernizr - Javascript Example</title>
+ 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript"></script>
+    <script src="/js/modernizr.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(document).ready(function()
+      {
+        if (Modernizr.websockets) {
+          $("#ws_result").html('Your browser has support for WebSockets');
+        } else {
+          $("#ws_result").html('Your browser does not support WebSockets');
+        }
+        if (Modernizr.eventsource) {
+          $("#sse_result").html('Your browser has support for EventSource');
+        } else {
+          $("#sse_result").html('Your browser does not support EventSource');
+        }
+      });
+    </script>
+  </head>
+  <body>
+ 
+    <p id="ws_result"></p>
+    <p id="sse_result"></p>
+ 
+  </body>
+</html>
